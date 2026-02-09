@@ -18,3 +18,7 @@ DEMO_SCRIPT.md
 DIRECTORY_TREE.md
 CONTRIBUTING.md
 
+.env
+.vscode/
+.idea/
+*.log
