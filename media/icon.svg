@@ -1,0 +1,40 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <!-- Genie lamp base -->
+  <defs>
+    <linearGradient id="lampGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="smokeGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:0.3" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Magical smoke -->
+  <path d="M 64 35 Q 50 25, 45 15 Q 42 5, 50 2 Q 58 -1, 64 8 Q 70 -1, 78 2 Q 86 5, 83 15 Q 78 25, 64 35" 
+        fill="url(#smokeGradient)" opacity="0.7"/>
+  
+  <!-- Lamp body -->
+  <ellipse cx="64" cy="90" rx="35" ry="15" fill="url(#lampGradient)"/>
+  <path d="M 35 75 Q 40 50, 64 45 Q 88 50, 93 75 L 99 90 L 29 90 Z" 
+        fill="url(#lampGradient)" stroke="#CC8400" stroke-width="2"/>
+  
+  <!-- Lamp spout -->
+  <path d="M 35 75 Q 25 70, 20 65 L 15 68 L 30 78 Z" 
+        fill="url(#lampGradient)" stroke="#CC8400" stroke-width="1"/>
+  
+  <!-- Lamp handle -->
+  <path d="M 93 75 Q 103 70, 108 65 Q 110 63, 112 65 Q 114 67, 112 69 L 98 78 Z" 
+        fill="url(#lampGradient)" stroke="#CC8400" stroke-width="1"/>
+  
+  <!-- Sparkles -->
+  <circle cx="50" cy="20" r="2" fill="#FFD700"/>
+  <circle cx="78" cy="18" r="2" fill="#FFD700"/>
+  <circle cx="64" cy="10" r="3" fill="#FFF"/>
+  <circle cx="45" cy="30" r="1.5" fill="#FFF"/>
+  <circle cx="82" cy="28" r="1.5" fill="#FFF"/>
+  
+  <!-- Code brackets in lamp -->
+  <text x="54" y="75" font-family="monospace" font-size="20" fill="#CC8400" font-weight="bold">&lt;/&gt;</text>
+</svg>

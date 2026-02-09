@@ -1,0 +1,20 @@
+out
+dist
+node_modules
+.vscode-test/
+*.vsix
+.DS_Store
+
+# Files only needed for Local Development
+PREFLIGHT_CHECKLIST.md
+PROJECT_SUMMARY.md
+QUICKSTART.md
+START_HERE.md
+STATUS.md
+setup.ps1
+setup.sh
+test.sh
+DEMO_SCRIPT.md
+DIRECTORY_TREE.md
+CONTRIBUTING.md
+

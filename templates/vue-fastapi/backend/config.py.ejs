@@ -1,0 +1,29 @@
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+class Settings:
+PROJECT_NAME: str = "<%= projectName %>"
+    API_VERSION: str = "v1"
+
+    # Server Configuration
+    HOST: str = os.getenv("HOST", "0.0.0.0")
+    PORT: int = int(os.getenv("PORT", "<%= backendPort %>"))
+
+        # CORS
+        CORS_ORIGINS: list = ["http://localhost:<%= frontendPort %>"]
+
+            <% if (databaseUrl) { %>
+                # Database Configuration
+                DATABASE_URL: str = os.getenv("DATABASE_URL", "<%= databaseUrl %>")
+                    <% } %>
+
+                        <% if (authDomain) { %>
+                            # Auth0 Configuration
+                            AUTH0_DOMAIN: str = os.getenv("AUTH0_DOMAIN", "<%= authDomain %>")
+                                AUTH0_API_AUDIENCE: str = os.getenv("AUTH0_API_AUDIENCE", "")
+                                AUTH0_ALGORITHMS: str = os.getenv("AUTH0_ALGORITHMS", "RS256")
+                                <% } %>
+
+                                    settings = Settings()

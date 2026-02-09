@@ -1,0 +1,17 @@
+fastapi>=0.115.0
+uvicorn[standard]>=0.32.0
+python-dotenv==1.0.0
+pydantic>=2.10.0
+<% if (authDomain) { %>
+    python-jose[cryptography]>=3.3.0
+    <% } %>
+        <% if (databaseUrl) { %>
+            <% if (databaseUrl.includes('postgresql')) { %>
+                psycopg2-binary==2.9.9
+                sqlalchemy==2.0.25
+                <% } %>
+                    <% if (databaseUrl.includes('mongodb')) { %>
+                        pymongo==4.6.1
+                        motor==3.3.2
+                        <% } %>
+                            <% } %>

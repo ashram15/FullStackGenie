@@ -1,0 +1,95 @@
+{
+  "name": "fullstackgenie",
+  "displayName": "Full Stack Genie",
+  "description": "Skip the boilerplate. Start coding in 60 seconds. Full-stack project scaffolding for hackathons.",
+  "version": "1.0.0",
+  "publisher": "fullstackgenie",
+  "icon": "media/icon.png",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "hackathon",
+    "scaffolding",
+    "boilerplate",
+    "full-stack",
+    "react",
+    "fastapi",
+    "template"
+  ],
+  "activationEvents": [
+    "onCommand:fullstackgenie.newProject"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "fullstackgenie.newProject",
+        "title": "Full Stack Genie: New Project",
+        "icon": "$(wand)"
+      }
+    ],
+    "walkthroughs": [
+      {
+        "id": "fullstackgenie.getStarted",
+        "title": "Configure Your Full Stack Genie Stack",
+        "description": "Set up your environment variables and get started",
+        "steps": [
+          {
+            "id": "openEnv",
+            "title": "Configure Environment Variables",
+            "description": "Add your API keys to the .env file\n[Open .env](command:fullstackgenie.openEnv)",
+            "media": {
+              "markdown": "media/walkthrough/env-setup.md"
+            }
+          },
+          {
+            "id": "installDeps",
+            "title": "Install Dependencies",
+            "description": "Run npm install in frontend and pip install in backend\n[Open Terminal](command:workbench.action.terminal.new)",
+            "media": {
+              "markdown": "media/walkthrough/install-deps.md"
+            }
+          },
+          {
+            "id": "runProject",
+            "title": "Launch Your Project",
+            "description": "Start the development servers\n[Start Dev Server](command:fullstackgenie.startDevServer)",
+            "media": {
+              "markdown": "media/walkthrough/run-project.md"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vscode/test-electron": "^2.3.0",
+    "@vscode/vsce": "^2.22.0",
+    "eslint": "^8.50.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "@octokit/rest": "^20.0.2",
+    "ejs": "^3.1.9",
+    "fs-extra": "^11.2.0"
+  }
+}
